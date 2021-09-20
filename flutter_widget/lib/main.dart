@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
               IconButton(icon: const Icon(Icons.add_a_photo), onPressed: () {})
             ],
           ),
-          body: Column(
+          body: Row(
             children: [
               Container(
                 height: 200,
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
                 color: Colors.amber,
               ),
 
-              const SizedBox(height: 10,),
+              const SizedBox(width: 10,),
 
               Container(
                 height: 200,
