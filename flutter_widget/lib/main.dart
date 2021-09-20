@@ -17,30 +17,42 @@ class MyApp extends StatelessWidget {
               IconButton(icon: const Icon(Icons.add_a_photo), onPressed: () {})
             ],
           ),
-          body: Row(
+
+
+          body: ListView(
             children: [
-              Container(
-                height: 200,
-                width: 150,
-                color: Colors.amber,
-              ),
 
-              const SizedBox(width: 10,),
+              Column(
+                children: [
+                  Container(
+                    height: 200,
+                    width: 150,
+                    color: Colors.amber,
+                  ),
 
-              Container(
-                height: 200,
-                width: 150,
-                color: Colors.blueAccent,
+                  const SizedBox(height: 10,),
+
+                  Container(
+                    height: 200,
+                    width: 150,
+                    color: Colors.blueAccent,
+                  ),
+
+                  const SizedBox(height: 10,),
+
+                  Container(
+                    height: 200,
+                    width: 150,
+                    color: Colors.blueAccent,
+                  )
+                ],
+
               ),
-              Container(
-                height: 200,
-                width: 150,
-                color: Colors.blueAccent,
-              )
+              
             ],
-          )
-        ),
-      )
+          ),
+        )
+      ),
     );
   }
 }
