@@ -10,22 +10,34 @@ class MyApp extends StatelessWidget {
       home: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            title: const Text("Home Page Test"),
+            title: const Text("Home Page"),
             centerTitle: true,
             leading: const Icon(Icons.message),
             actions: [
               IconButton(icon: const Icon(Icons.add_a_photo), onPressed: () {})
             ],
           ),
-          body: Container(
-            height: 200,
-            width: 300,
-           decoration: const BoxDecoration(color: Colors.amber),
+          body: Column(
+            children: [
+              Container(
+                height: 200,
+                width: 150,
+                color: Colors.amber,
+              ),
 
-            child: const Text(
-              "This is my first app",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-            ),
+              const SizedBox(height: 10,),
+
+              Container(
+                height: 200,
+                width: 150,
+                color: Colors.blueAccent,
+              ),
+              Container(
+                height: 200,
+                width: 150,
+                color: Colors.blueAccent,
+              )
+            ],
           )
         ),
       )
