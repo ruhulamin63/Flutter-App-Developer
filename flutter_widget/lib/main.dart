@@ -33,6 +33,8 @@ class HomePage extends StatelessWidget {
             ],
           ),
 
+        floatingActionButton: FloatingActionButton(onPressed: () {}, child: Icon(Icons.add),),
+
         body: Center(
           child: Stack(
 
