@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
             centerTitle: true,
             leading: Icon(Icons.message),
             actions: [
-              IconButton(icon: const Icon(Icons.add_a_photo), onPressed: () {},)
+              IconButton(icon: const Icon(Icons.add_a_photo), onPressed: () {})
             ],
           ),
           body: Center(
