@@ -35,35 +35,21 @@ class HomePage extends StatelessWidget {
 
 
           body: ListView(
-            children: [
-
-              Column(
-                children: [
-                  Container(
-                    height: screenHeight,
-                    width: screenWidth,
-                    color: Colors.amber,
-                  ),
-
-                  const SizedBox(height: 10,),
-
-                  Container(
-                    height: screenHeight,
-                    width: screenWidth,
-                    color: Colors.blueAccent,
-                  ),
-
-                  const SizedBox(height: 10,),
-
-                  Container(
-                    height: screenHeight,
-                    width: screenWidth,
-                    color: Colors.blueAccent,
-                  )
-                ],
+            children: const [
+              ListTile(
+                title: Text("Ruhul Amin"),
+                subtitle: Text("I'm a student of AIUB"),
+                leading: CircleAvatar(child: Icon(Icons.message),),
+                trailing: Icon(Icons.add_a_photo),
 
               ),
+              ListTile(
+                title: Text("Hridoy Khan"),
+                subtitle: Text("I'm a student of AIUB"),
+                leading: CircleAvatar(child: Icon(Icons.message),),
+                trailing: Icon(Icons.add_a_photo),
 
+              ),
             ],
           ),
         )
