@@ -33,26 +33,26 @@ class HomePage extends StatelessWidget {
             ],
           ),
 
+        body: Center(
+          child: Stack(
 
-          body: ListView(
-            children: const [
-              ListTile(
-                title: Text("Ruhul Amin"),
-                subtitle: Text("I'm a student of AIUB"),
-                leading: CircleAvatar(child: Icon(Icons.message),),
-                trailing: Icon(Icons.add_a_photo),
+            clipBehavior: Clip.none,
+            alignment: Alignment.center,
 
+            children: [
+              Container(
+                height: screenHeight,
+                width: screenWidth,
+                color: Colors.amber,
               ),
-              ListTile(
-                title: Text("Hridoy Khan"),
-                subtitle: Text("I'm a student of AIUB"),
-                leading: CircleAvatar(child: Icon(Icons.message),),
-                trailing: Icon(Icons.add_a_photo),
-
-              ),
+              const Positioned(
+                  bottom: -50,
+                  child: CircleAvatar(radius: 50,)
+              )
             ],
-          ),
-        )
+          )
+        ),
+      ),
     );
   }
 }
