@@ -33,26 +33,11 @@ class HomePage extends StatelessWidget {
             ],
           ),
 
-        floatingActionButton: FloatingActionButton(onPressed: () {}, child: Icon(Icons.add),),
+        floatingActionButton: FloatingActionButton(onPressed: () {}, child: const Icon(Icons.add),),
 
         body: Center(
-          child: Stack(
-
-            clipBehavior: Clip.none,
-            alignment: Alignment.center,
-
-            children: [
-              Container(
-                height: screenHeight,
-                width: screenWidth,
-                color: Colors.amber,
-              ),
-              const Positioned(
-                  bottom: -50,
-                  child: CircleAvatar(radius: 50,)
-              )
-            ],
-          )
+          child: Image.asset("images/pic.jpeg"),
+         // child: Image.network("https://pixabay.com/photos/tree-flowers-meadow-tree-trunk-276014/"),
         ),
       ),
     );
