@@ -5,9 +5,24 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SafeArea(
+      home: HomePage()
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+
+    var screenHeight = MediaQuery.of(context).size.height / 3; // Every screen show almost same
+    var screenWidth = MediaQuery.of(context).size.width / 3;
+
+    return SafeArea(
         child: Scaffold(
           appBar: AppBar(
             title: const Text("Home Page"),
@@ -25,34 +40,33 @@ class MyApp extends StatelessWidget {
               Column(
                 children: [
                   Container(
-                    height: 200,
-                    width: 150,
+                    height: screenHeight,
+                    width: screenWidth,
                     color: Colors.amber,
                   ),
 
                   const SizedBox(height: 10,),
 
                   Container(
-                    height: 200,
-                    width: 150,
+                    height: screenHeight,
+                    width: screenWidth,
                     color: Colors.blueAccent,
                   ),
 
                   const SizedBox(height: 10,),
 
                   Container(
-                    height: 200,
-                    width: 150,
+                    height: screenHeight,
+                    width: screenWidth,
                     color: Colors.blueAccent,
                   )
                 ],
 
               ),
-              
+
             ],
           ),
         )
-      ),
     );
   }
 }
