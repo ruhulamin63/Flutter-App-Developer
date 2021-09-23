@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
 void main() => runApp(MyApp());
@@ -26,17 +27,34 @@ class HomePage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Center(
-          child: Card(
-            elevation: 20,
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20)),
-            ),
-
-            child: Container(
-              height:  ScreenHeight,
-              width: ScreenWidth,
-            ),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: GridView.count(
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
+            crossAxisCount: 2,
+            children: [
+              Container(
+                height: ScreenHeight,
+                width: ScreenWidth,
+                color: Colors.amber,
+              ),
+              Container(
+                height: ScreenHeight,
+                width: ScreenWidth,
+                color: Colors.amber,
+              ),
+              Container(
+                height: ScreenHeight,
+                width: ScreenWidth,
+                color: Colors.amber,
+              ),
+              Container(
+                height: ScreenHeight,
+                width: ScreenWidth,
+                color: Colors.amber,
+              )
+            ],
           ),
         ),
       )
