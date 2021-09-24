@@ -5,14 +5,29 @@ class second extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Hero(
-          tag: "add",
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
 
-          child: Icon(
-            Icons.message,
-            size: 50,
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            title: const Text("Second Page"),
+            centerTitle: true,
+            leading: const Icon(Icons.message),
+            actions: [
+              IconButton(icon: const Icon(Icons.add_a_photo), onPressed: () {})
+            ],
+          ),
+          body: const Center(
+            child: Hero(
+              tag: "add",
+
+              child: Icon(
+                Icons.message,
+                size: 50,
+                color: Colors.green,
+              ),
+            ),
           ),
         ),
       ),

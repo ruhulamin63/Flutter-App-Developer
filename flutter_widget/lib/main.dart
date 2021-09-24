@@ -25,25 +25,39 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: CircleAvatar(
-          radius: 50,
+    var screenHeight = MediaQuery.of(context).size.height / 3; // Every screen show almost same
+    var screenWidth = MediaQuery.of(context).size.width / 3;
+    
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+        title: const Text("Home Page Test"),
+          centerTitle: true,
+          leading: const Icon(Icons.message),
+          actions: [
+            IconButton(icon: const Icon(Icons.add_a_photo), onPressed: () {})
+          ],
+        ),
 
-          child: GestureDetector(
-            child: const Hero(
-              tag: "Add",
+        body: Center(
+          child: CircleAvatar(
+            radius: 50,
 
-              child: Icon(
-                Icons.add_a_photo,
-                size: 50,
+            child: GestureDetector(
+              child: const Hero(
+                tag: "Add",
+
+                child: Icon(
+                  Icons.add_a_photo,
+                  size: 50,
+                ),
               ),
-            ),
 
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => second()));
-            },
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => second()));
+              },
+            ),
           ),
         ),
       ),
