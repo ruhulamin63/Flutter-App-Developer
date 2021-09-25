@@ -10,6 +10,7 @@ class second extends StatelessWidget {
 
       home: SafeArea(
         child: Scaffold(
+
           appBar: AppBar(
             title: const Text("Second Page"),
             centerTitle: true,
@@ -18,6 +19,7 @@ class second extends StatelessWidget {
               IconButton(icon: const Icon(Icons.add_a_photo), onPressed: () {})
             ],
           ),
+
           body: const Center(
             child: Hero(
               tag: "add",
