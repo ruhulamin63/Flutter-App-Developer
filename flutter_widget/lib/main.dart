@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
         // ),
 
         bottomNavigationBar: BottomNavigationBar(
-          
+
           currentIndex: _currentindex,
 
           items: const [
