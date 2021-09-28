@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class two extends StatelessWidget {
-  const two({Key? key}) : super(key: key);
+class notification extends StatelessWidget {
+  const notification({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("Two Page"),
+          title: const Text("Notification"),
           centerTitle: true,
           leading: const Icon(Icons.message),
           actions: [
