@@ -1,0 +1,29 @@
+
+======== extra addding app-level-build-gradle => defaultConfig===========
+multiDexEnabled true
+
+======== extra addding app-level-build-gradle => dependencies===========
+implementation 'com.android.support:multidex'
+
+============extra adding main file ===========
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const MyApp());
+}
+
+===============dependencies===========
+  firebase_auth: ^3.3.2
+  firebase_core: ^1.3.0
+  cloud_firestore: ^2.3.0
+  firebase_database: ^7.1.1
+  firebase_storage: ^8.0.3
+  fluttertoast: ^8.0.7
+
+
+=============android for app-level-build-gradle============
+ compileSdkVersion 30
+
+================defaultConfig for app-level-build-gradle =========
+minSdkVersion 20
+targetSdkVersion 30
