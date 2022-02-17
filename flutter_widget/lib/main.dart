@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'package:flutter_widget/one.dart';
+import 'package:flutter_widget/BottomnavigatoBar/call.dart';
 import 'package:flutter_widget/second.dart';
-import 'package:flutter_widget/two.dart';
-import 'package:flutter_widget/three.dart';
-import 'package:flutter_widget/four.dart';
+import 'package:flutter_widget/BottomnavigatoBar/message.dart';
+import 'package:flutter_widget/BottomnavigatoBar/notification.dart';
+import 'package:flutter_widget/BottomnavigatoBar/camera.dart';
 
 import 'package:liquid_swipe/liquid_swipe.dart';
 
@@ -34,10 +34,10 @@ class _HomePageState extends State<HomePage> {
 
   var _currentindex = 0;
   final pages = [
-    const one(),
-    const two(),
-    const three(),
-    const four()
+    const call(),
+    const message(),
+    const notification(),
+    const camera()
   ];
 
   @override
@@ -66,20 +66,20 @@ class _HomePageState extends State<HomePage> {
             BottomNavigationBarItem(
 
               backgroundColor: Colors.red,
+              icon: Icon(Icons.call),
+              title: Text("Call"),
+            ),
+            BottomNavigationBarItem(
               icon: Icon(Icons.message),
               title: Text("Message"),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.call),
-              title: Text("call"),
+              icon: Icon(Icons.add_alert),
+              title: Text("Notification"),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.pan_tool),
-              title: Text("pan tool"),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.radio),
-              title: Text("radio"),
+              icon: Icon(Icons.camera),
+              title: Text("Camera"),
             ),
           ],
 
