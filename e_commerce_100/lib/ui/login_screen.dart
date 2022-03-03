@@ -21,28 +21,23 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _passwordController = TextEditingController();
   bool _obscureText = true;
 
-  signIn()async{
+  signIn() async {
     try {
-      UserCredential userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
-          email: _emailController.text,
-          password: _passwordController.text
-      );
+      UserCredential userCredential = await FirebaseAuth.instance
+          .signInWithEmailAndPassword(
+              email: _emailController.text, password: _passwordController.text);
       var authCredential = userCredential.user;
       print(authCredential!.uid);
-      if(authCredential.uid.isNotEmpty){
-        Navigator.push(context, CupertinoPageRoute(builder: (_)=>UserForm()));
-      }
-      else{
+      if (authCredential.uid.isNotEmpty) {
+        Navigator.push(context, CupertinoPageRoute(builder: (_) => UserForm()));
+      } else {
         Fluttertoast.showToast(msg: "Something is wrong");
       }
-
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         Fluttertoast.showToast(msg: "No user found for that email.");
-
       } else if (e.code == 'wrong-password') {
         Fluttertoast.showToast(msg: "Wrong password provided for that user.");
-
       }
     } catch (e) {
       print(e);
@@ -58,7 +53,6 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             SizedBox(
               height: 150.h,
-              width: ScreenUtil().screenWidth,
               child: Padding(
                 padding: EdgeInsets.only(left: 20.w),
                 child: Column(
@@ -192,25 +186,25 @@ class _LoginScreenState extends State<LoginScreen> {
                                   ),
                                   suffixIcon: _obscureText == true
                                       ? IconButton(
-                                      onPressed: () {
-                                        setState(() {
-                                          _obscureText = false;
-                                        });
-                                      },
-                                      icon: Icon(
-                                        Icons.remove_red_eye,
-                                        size: 20.w,
-                                      ))
+                                          onPressed: () {
+                                            setState(() {
+                                              _obscureText = false;
+                                            });
+                                          },
+                                          icon: Icon(
+                                            Icons.remove_red_eye,
+                                            size: 20.w,
+                                          ))
                                       : IconButton(
-                                      onPressed: () {
-                                        setState(() {
-                                          _obscureText = true;
-                                        });
-                                      },
-                                      icon: Icon(
-                                        Icons.visibility_off,
-                                        size: 20.w,
-                                      )),
+                                          onPressed: () {
+                                            setState(() {
+                                              _obscureText = true;
+                                            });
+                                          },
+                                          icon: Icon(
+                                            Icons.visibility_off,
+                                            size: 20.w,
+                                          )),
                                 ),
                               ),
                             ),
@@ -221,9 +215,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 50.h,
                         ),
                         // elevated button
-                        customButton("Sign In", (){
-                          signIn();
-                        },),
+                        customButton(
+                          "Sign In",
+                          () {
+                            signIn();
+                          },
+                        ),
                         SizedBox(
                           height: 20.h,
                         ),

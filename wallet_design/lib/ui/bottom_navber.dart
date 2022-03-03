@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:waller_design/ui/wallet.dart';
+import 'package:waller_design/ui/bottom_nav_pages/wallet.dart';
 import '../const/AppColors.dart';
 import 'bottom_nav_pages/home.dart';
 import 'bottom_nav_pages/menu.dart';
 import 'bottom_nav_pages/special.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BottomNavController extends StatefulWidget {
   const BottomNavController({Key? key}) : super(key: key);
@@ -24,16 +25,6 @@ class _BottomNavControllerState extends State<BottomNavController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: const Text(
-          "E-Commerce",
-          style: TextStyle(color: Colors.black),
-        ),
-        centerTitle: true,
-        automaticallyImplyLeading: false,
-      ),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 5,
         selectedItemColor: AppColors.deep_orange,
@@ -41,7 +32,7 @@ class _BottomNavControllerState extends State<BottomNavController> {
         unselectedItemColor: Colors.grey,
         currentIndex: _currentIndex,
         selectedLabelStyle:
-        const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
