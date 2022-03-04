@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ui_design_105/map/google_map.dart';
 import 'package:ui_design_105/ui/drivers_ui/driver_screen.dart';
 
 void main() {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: Driver_screen(),
+          home: Google_Map(),
         );
       },
     );
