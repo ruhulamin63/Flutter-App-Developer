@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../const/AppColors.dart';
+import '../../map/google_map.dart';
 
 class CreateProfileScreen extends StatefulWidget {
   const CreateProfileScreen({Key? key}) : super(key: key);
@@ -118,7 +119,7 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
                                     SizedBox(height: 5.h,),
                                     MaterialButton(onPressed: (){
                                       Navigator.push(context,
-                                          MaterialPageRoute(builder: (context)=>CreateProfileScreen()));
+                                          MaterialPageRoute(builder: (context)=>Google_Map()));
                                     }, shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(10)
                                     ),
